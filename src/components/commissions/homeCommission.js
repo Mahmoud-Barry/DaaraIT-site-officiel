@@ -1,5 +1,6 @@
 import TitleComponent from "../modules/title";
 import {minCard} from '../../data/commission'
+import { Link } from "react-router-dom";
 
 const HomeCommission=()=> {
   
@@ -47,7 +48,8 @@ const HomeCommission=()=> {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {minCard.map((item, index) => (
-            <div className="grid grid-cols-3 gap-8" key={index}>
+            <Link to="/commissions" >
+              <div className="grid grid-cols-3 gap-8" key={index}>
               <div className="bg-white rounded-md flex items-center justify-center shadow-lg h-[90px] text-blue-500">
                 <item.icon />
               </div>
@@ -58,6 +60,7 @@ const HomeCommission=()=> {
                 <p className="text-[.73rem]">{item.description}</p>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>

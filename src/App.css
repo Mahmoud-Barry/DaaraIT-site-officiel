@@ -7,3 +7,8 @@
   --white : #FFF;
 
 }
+
+.bg-contacts{
+  background-color: var(--blueSecondary);
+}
+@import "react-alice-carousel/lib/alice-carousel.css";

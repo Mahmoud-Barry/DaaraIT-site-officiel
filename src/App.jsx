@@ -1,11 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/home/home";
-import Events from "./pages/events/Events";
-import Galerie from "./pages/galerie/Galerie";
-import Commissions from "./pages/commissions/commissions";
 import AppTemplate from "./layouts/AppTemplate";
+import { navigationPaths } from "./routes/app.navigation";
 
 function App() {
 
@@ -13,11 +10,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AppTemplate />}>
-          <Route index element={<Home />} />
-          <Route path="evenements" element={<Events />} />
-          <Route path="commissions" element={<Commissions />} />
-          <Route path="galerie" element={<Galerie />} />
-
+          {
+            navigationPaths.map((navigation, index)=> (
+              <Route key={index} path={navigation.path} element={navigation.element} />
+            ))
+          }
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import Input from "../../components/forms/input";
 
 const Contact = () => {
     return ( 
-        <div className="container-xl  bg-blue-600 px-[4rem] py-[5rem]">
+        <div className="container-xl  bg-contacts px-[4rem] py-[5rem]">
           <h1
             className={
               "text-[1.3rem] font-[700] border-l-[10px] border-black px-6 text-white "
